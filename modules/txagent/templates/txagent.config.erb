@@ -1,0 +1,24 @@
+#rabbitmq
+agent.rabbitmq.host=<%= rabbitmqServer%>
+agent.rabbitmq.port=5672
+agent.rabbitmq.user=guest
+agent.rabbitmq.password=guest
+agent.rabbitmq.exchange=transcoder_exchange
+agent.rabbitmq.queue.transcoder.request.name=transcoder_queue
+agent.rabbitmq.queue.transcoder.state.name=transcoder_state_queue
+agent.rabbitmq.queue.transcoder.state.routing_key=transcoder_state
+agent.rabbitmq.queue.transcoder.request.routing_key=transcoder
+agent.rabbitmq.queue.merger.request.name=merger_queue
+agent.rabbitmq.queue.merger.state.name=merger_state_queue
+agent.rabbitmq.queue.merger.state.routing_key=merger_state
+agent.rabbitmq.queue.merger.request.routing_key=merger
+
+#coordinator
+agent.coordianator.rest.host=<%= restServer%>
+agent.transcoder.rest.url.progress=${agent.coordianator.rest.host}/api/cloudtask/transcoding/progress
+agent.merger.rest.url.progress=${agent.coordianator.rest.host}/api/cloudtask/merging/progress
+
+
+#agent
+agent.listener.getProgress.interval=3000
+agent.capability.task.max=4

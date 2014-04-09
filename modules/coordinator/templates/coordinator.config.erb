@@ -1,0 +1,17 @@
+# This file managed by Puppet
+# Template Path: <%= @module_name %>/templates/coordinator.config
+
+#rabbitmq
+rabbitmq.host=<%= rabbitmqServer %>
+rabbitmq.username=guest
+rabbitmq.password=guest
+rabbitmq.port=5672
+
+#mongodb
+mongodb.ip=<%= mongodbServer %>
+mongodb.port=27017
+mongodb.dbname=test
+
+#segment
+segment.interval=300000
+segment.filepath=/mnt/data/remote/cloudtranscoder/medium/
