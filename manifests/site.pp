@@ -9,6 +9,8 @@ node default {
 	file{ "/tmp/helloword.txt":
 		content => "hello",
 	}
+
+ddd
 }
 
 
